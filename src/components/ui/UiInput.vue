@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import UiIcon from "@/components/ui/UiIcon.vue";
 
 interface IProps {
   input: {

@@ -40,7 +40,7 @@ const data = reactive({
         @update:modelValue="searchData($event)"
       />
     </section>
-    <section v-if="hashTable" class="page-section">
+    <section v-if="hashTable && filteredData" class="page-section">
       <UiFilter v-if="tabs.length" :tabs="tabs" />
       <SchedulesTable :table-data="filteredData" />
     </section>
