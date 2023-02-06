@@ -95,6 +95,12 @@ export const useDataStore = defineStore('data', {
 
     sortData(value: string, direction: boolean) {
       this.getDataFromApi(value, direction);
+    },
+
+    removeSchedule(index: number) {
+      const openedTab = this.tabs.find(item => item.value === this.activeTab);
+      if (openedTab) openedTab.quantity--;
+      this.filteredData?.splice(index, 1);
     }
   }
 })

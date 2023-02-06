@@ -63,8 +63,9 @@ const sortCol = ref('');
     <tbody>
       <SchedulesTableRow
         v-for="(row, i) in tableData"
-        :key="i"
+        :key="row.title"
         :row="row"
+        :index="i"
       />
     </tbody>
   </table>
@@ -92,6 +93,7 @@ const sortCol = ref('');
   }
 
   &__col {
+    position: relative;
     padding: 20px;
     text-align: left;
   }
